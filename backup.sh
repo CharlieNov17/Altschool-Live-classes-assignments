@@ -2,7 +2,7 @@
 #sudo apt update
 #sudo apt install tar
 
-timestamp=$(date '+%Y_%m_%d_%H-%M-%S')
+timestamp=$(date '+%Y_%m_%d_%H_%M_%S')
 source_directory=$1
 destination_directory=$2
 backup_directory=$destination_directory$timestamp.tar.gz
@@ -14,7 +14,7 @@ backup_directory=$destination_directory$timestamp.tar.gz
 #source-2024_03_05_19
 #echo $backup_directory
 
-sudo tar -czf $backup_directory  $source_directory
+sudo tar -czf $backup_directory > $source_directory
 
 echo $backup_directory
 
